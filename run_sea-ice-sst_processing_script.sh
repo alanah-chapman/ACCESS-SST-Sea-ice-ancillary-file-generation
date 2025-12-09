@@ -15,6 +15,7 @@
 #PBS -l storage=gdata/xp65+gdata/q90+scratch/q90+gdata/access
 
 set -x
+# cd to location of ancillary file generation scripts (python and karl taylor fortran scripts)
 cd /g/data/q90/ac9768/ancil/make_ancils/SstSeaIce
 
 # Clean environment
@@ -22,10 +23,10 @@ module purge
 
 # load modules
 module use /g/data/xp65/public/modules
-
 module load gcc/14.2.0
 module load intel-compiler/2021.10.0  
 
+# compile fortran program
 gfortran -g -fbacktrace /g/data/q90/ac9768/ancil/make_ancils/SstSeaIce/karl_taylor_hadgam3_n96e.f -o karl_taylor_n96
 
 # Check if it compiled
