@@ -51,7 +51,7 @@ After getting access to a MOSRS account, details for ancillary file creation is 
 			5. Modification to `run_make_amip_lbcs.py` change 
 			`os.system('cp '+p_work+'karl/hadisstbc_sic_192x144_1871_2024.pp '+p_work+'seaice_amip_karled_n96e.pp')`
 			- Make sure 1871_2024 are the interest years (second and second last years in the input file)
-		2. Other edits to specific lines are detailed *here* 
+		2. Other edits to specific lines are done to the MetOffice code, I have linked here to a private repo (please contact me if you want access).
 	3. Modification to `regrid_input_ants.py`
 	4. Modification *build_nl* to `utils.py`
 	5. Modification to `run_make_amip_lbcs.py`
