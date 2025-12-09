@@ -56,15 +56,14 @@ After getting access to a MOSRS account, details for ancillary file creation is 
 	4. Modification *build_nl* to `utils.py`
 	5. Modification to `run_make_amip_lbcs.py`
 3. Edit paths in `run_sea-ice-sst_processing_script.sh` to path your file paths
-4. Run code `qsub run_sea-ice-sst_processing_script.sh`
-
+4. Run code `qsub run_sea-ice-sst_processing_script.sh` (in future I will edit these so that they are not hardcoded into the fortran scripts and instead only need to be changed in the bash script...I haven't had time to do this yet), the ancil generation is done through running `qsub run_sea-ice-sst_processing_script.sh` on a gadi terminal.
 
 **Output ancillary files**
 - Located in the output file directory defined by `anc_control_amip4cmip6.py`
 - Note that the first (generally 1870) and last years (in my case 2024) of the processed output data files will contain uncorrected SST/seaice values *noted by the MetOffice under* [what do the files contain?](https://code.metoffice.gov.uk/trac/ancil/wiki/CMIP6/ForcingData/SstSeaIce)
 - Check files with xconv `xconv seaice_amip_n96e.anc`
 
-
 **Update suite model ancillary file paths**
 - Current ACCESS .anc file location and name: `app/um/rose-app.conf:ancilfilename='/g/data/access/TIDS/CMIP6_**ANCIL**/data/**ancil**s/amip_fix/timeseries_1870-2018/SstSeaIce/seaice_amip_n96e.anc'`
 1. Change path to new ancillary file
+
